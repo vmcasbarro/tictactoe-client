@@ -42,14 +42,14 @@ const changePasswordFailure = function () {
   $('#change-password').css('color', 'red')
   $('#change-password-form').trigger('reset')
 }
-//
-// const signOutSuccess = function () {
-//   $('#logout').html('you are successfully signed out.')
-//   $('#signup-form').removeClass('hidden')
-//   $('#signin-form').removeClass('hidden')
-//   $('#change-password-form').addClass('hidden')
-//   $('#signout-button').addClass('hidden')
-// }
+
+const signOutSuccess = function () {
+  $('#logout').html('you are successfully signed out.')
+  $('#signup-form').removeClass('hidden')
+  $('#signin-form').removeClass('hidden')
+  $('#change-password-form').addClass('hidden')
+  $('#signout-button').addClass('hidden')
+}
 
 module.exports = {
   signUpSuccess,
@@ -57,6 +57,6 @@ module.exports = {
   signInSuccess,
   signInFailure,
   changePasswordSuccess,
-  changePasswordFailure
-
+  changePasswordFailure,
+  signOutSuccess
 }
