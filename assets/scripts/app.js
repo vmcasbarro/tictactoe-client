@@ -12,4 +12,5 @@ $(() => {
   // your JS code goes here
   $('#signup-form').on('submit', authEvents.onSignUp)
   $('#signin-form').on('submit', authEvents.onSignIn)
+  $('#change-password-form').on('submit', authEvents.onChangePassword)
 })

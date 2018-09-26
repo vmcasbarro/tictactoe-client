@@ -31,9 +31,32 @@ const signUpFailure = function () {
   $('#signup-form').trigger('reset')
 }
 
+const changePasswordSuccess = function () {
+  $('#change-password').html('successfully changed password!')
+  $('#change-password').css('color', 'green')
+  $('#change-password-form').trigger('reset')
+}
+
+const changePasswordFailure = function () {
+  $('#change-password').html('something went wrong. Make sure you are logged in and try again.')
+  $('#change-password').css('color', 'red')
+  $('#change-password-form').trigger('reset')
+}
+//
+// const signOutSuccess = function () {
+//   $('#logout').html('you are successfully signed out.')
+//   $('#signup-form').removeClass('hidden')
+//   $('#signin-form').removeClass('hidden')
+//   $('#change-password-form').addClass('hidden')
+//   $('#signout-button').addClass('hidden')
+// }
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  changePasswordSuccess,
+  changePasswordFailure
+
 }
