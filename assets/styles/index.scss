@@ -1,1 +1,33 @@
 @import '~bootstrap/scss/bootstrap';
+
+$background-color: #FAF3DD;
+$font-color: #929487;
+$border-color: #75A77E;
+
+body {
+  background: $background-color;
+  color: $font-color;
+}
+
+.container {
+  width: 50%;
+}
+.board {
+  border-style: solid;
+  border-color: $border-color;
+  padding-top: 12.5%;
+  padding-bottom: 12.5%;
+  text-align: center;
+}
+
+.center {
+
+}
+
+.bottom-row {
+
+}
+
+.auth {
+  text-align: center;
+}

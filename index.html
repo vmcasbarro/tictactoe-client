@@ -13,5 +13,80 @@
     </head>
     <body>
       <h1>Vince's Tic Tac Toe</h1>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 box board"></div>
+          <div class="col-sm-4 box board teal"></div>
+          <div class="col-sm-4 box board teal"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4 box board teal"></div>
+          <div class="col-sm-4 box board center"></div>
+          <div class="col-sm-4 box board teal"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4 box board bottom-row"></div>
+          <div class="col-sm-4 box board bottom-row"></div>
+          <div class="col-sm-4 box board bottom-row"></div>
+        </div>
+      </div>
+      <br>
+
+      <div class="auth">
+
+        <form id="signup-form" action="index.html" method="post">
+          <legend>sign up!</legend>
+          <input required type="text" name="credentials[email]" placeholder="email"/>
+          <br>
+          <input required type="password" name="credentials[password]"  placeholder="password" />
+          <br>
+          <input required type="password" name="credentials[password_confirmation]"  placeholder="confirm password"/>
+          <input type="submit" name="" value="submit" class="btn btn-outline-primary">
+        </form>
+        <p id="signed-up"></p>
+        <br>
+
+        <form id="signin-form" action="index.html" method="post">
+          <legend>sign in!</legend>
+          <input required type="text" name="credentials[email]" placeholder="email"/>
+          <br>
+          <input required type="password" name="credentials[password]"  placeholder="password" />
+          <input type="submit" name="" value="submit" class="btn btn-success">
+        </form>
+        <p id="signed-in"></p>
+
+        <form id="change-password-form" class="hidden">
+          <legend>change password</legend>
+          <input required type="password" name="passwords[old]" placeholder="old password"/>
+          <br>
+          <input required type="password" name="passwords[new]"  placeholder="new password" />
+          <input type="submit" name="" value="change password" class="btn btn-success">
+        </form>
+        <p id="change-password"></p>
+        <br>
+
+        <button
+          id="signout-button" class="btn btn-outline-danger hidden"> sign out
+        </button>
+        <p id="logout"></p>
+        <br>
+
+        <form id="create-example-form" action="index.html" method="post">
+          <legend>create new example</legend>
+          <input type="text" name="example[text]" placeholder="example text">
+          <input type="submit" class="btn btn-outline-primary">
+
+        </form>
+        <br>
+
+        <button
+          id="get-examples-button" class="btn btn-outline-primary"> show all examples
+        </button>
+
+      </div>
+
     </body>
 </html>
