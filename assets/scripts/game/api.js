@@ -12,6 +12,18 @@ const newGame = function () {
   })
 }
 
+const sendMove = function (data) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${store.game.id}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
-  newGame
+  newGame,
+  sendMove
 }

@@ -9,6 +9,8 @@ const onSelect = function (event) {
   //console.log(event.target.id)
   const index = event.target.id
   game.addLetter(index)
+  const data = getFormFields(event.target)
+  api.sendMove(index)
 }
 
 const onReset = function () {
