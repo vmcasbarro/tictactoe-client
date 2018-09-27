@@ -19,7 +19,15 @@ const sendMove = function (data) {
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data
+    data: {
+      "game": {
+        "cell": {
+          "index": "0",
+          "value": "x"
+        },
+        "over": "false"
+      }
+    }
   })
 }
 

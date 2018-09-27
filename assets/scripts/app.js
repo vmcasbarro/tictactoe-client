@@ -28,4 +28,6 @@ $(() => {
   $(`[data-cell-index=8]`).on('click', gameEvents.onSelect)
 
   $('#reset-button').on('click', gameEvents.onReset)
+
+  $('#test').on('submit', gameEvents.getThoseFields)
 })
