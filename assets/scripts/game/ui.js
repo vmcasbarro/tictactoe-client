@@ -9,8 +9,16 @@ const addLetter = function (index) {
   $(`[data-cell-index=${index}]`).text(`${game.currentLetter}`)
 }
 
+const boardUIReset = function () {
+  game.resetBoard()
+  $('#game-status').empty()
+  for (let i = 0; i < game.board.length; i++) {
+    $(`[data-cell-index=${i}]`).empty()
+  }
 
+}
 
 module.exports = {
-  addLetter
+  addLetter,
+  boardUIReset
 }

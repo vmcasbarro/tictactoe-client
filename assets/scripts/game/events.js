@@ -11,7 +11,12 @@ const onSelect = function (event) {
   game.addLetter(index)
 }
 
+const onReset = function () {
+  ui.boardUIReset()
+}
+
 module.exports = {
-  onSelect
+  onSelect,
+  onReset
 
 }

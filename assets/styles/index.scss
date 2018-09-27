@@ -9,6 +9,12 @@ body {
   color: $font-color;
 }
 
+p {
+  text-align: center;
+  color: $background-color;
+  background-color: $border-color;
+}
+
 .container {
   width: 50%;
 }
@@ -29,5 +35,9 @@ body {
 }
 
 .auth {
+  text-align: center;
+}
+
+.reset {
   text-align: center;
 }

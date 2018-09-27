@@ -26,4 +26,6 @@ $(() => {
   $(`[data-cell-index=6]`).on('click', gameEvents.onSelect)
   $(`[data-cell-index=7]`).on('click', gameEvents.onSelect)
   $(`[data-cell-index=8]`).on('click', gameEvents.onSelect)
+
+  $('#reset-button').on('click', gameEvents.onReset)
 })
