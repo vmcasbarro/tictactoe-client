@@ -13,6 +13,7 @@ const onSelect = function (event) {
 
 const onReset = function () {
   ui.boardUIReset()
+  api.newGame()
 }
 
 module.exports = {
