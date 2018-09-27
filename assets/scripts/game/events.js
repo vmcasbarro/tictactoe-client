@@ -14,6 +14,7 @@ const onSelect = function (event) {
 const onReset = function () {
   ui.boardUIReset()
   api.newGame()
+    .then(ui.startGameSuccess)
 }
 
 module.exports = {

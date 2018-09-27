@@ -1,5 +1,6 @@
 'use strict'
 const game = require('../../../lib/game.js')
+const store = require('./../store.js')
 
 // not working, use fxn in game.js
 const addLetter = function (index) {
@@ -20,7 +21,12 @@ const boardUIReset = function () {
 
 }
 
+const startGameSuccess = function (response) {
+  store.game = response.game
+}
+
 module.exports = {
   addLetter,
-  boardUIReset
+  boardUIReset,
+  startGameSuccess
 }
