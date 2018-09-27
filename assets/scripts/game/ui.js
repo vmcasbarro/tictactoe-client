@@ -12,6 +12,8 @@ const addLetter = function (index) {
 const boardUIReset = function () {
   game.resetBoard()
   $('#game-status').empty()
+  $('#whose-turn').empty()
+  $('#whose-turn').text(game.currentLetter)
   for (let i = 0; i < game.board.length; i++) {
     $(`[data-cell-index=${i}]`).empty()
   }

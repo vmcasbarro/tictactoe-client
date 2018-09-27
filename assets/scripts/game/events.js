@@ -18,5 +18,4 @@ const onReset = function () {
 module.exports = {
   onSelect,
   onReset
-
 }
