@@ -21,7 +21,14 @@ const onReset = function () {
     .then(ui.startGameSuccess)
 }
 
+const onGetHistory = function () {
+  api.getHistory()
+    .then(ui.historySuccess)
+    .catch(console.log)
+}
+
 module.exports = {
   onSelect,
-  onReset
+  onReset,
+  onGetHistory
 }

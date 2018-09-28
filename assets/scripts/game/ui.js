@@ -25,8 +25,14 @@ const startGameSuccess = function (response) {
   store.game = response.game
 }
 
+const historySuccess = function (response) {
+  store.games = response.games
+  $('#number-of-games').text(`total games played: ${response.games.length}`)
+}
+
 module.exports = {
   addLetter,
   boardUIReset,
-  startGameSuccess
+  startGameSuccess,
+  historySuccess
 }

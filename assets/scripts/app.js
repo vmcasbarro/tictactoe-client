@@ -29,5 +29,5 @@ $(() => {
 
   $('#reset-button').on('click', gameEvents.onReset)
 
-  $('#test').on('submit', gameEvents.getThoseFields)
+  $('#history').on('click', gameEvents.onGetHistory)
 })
