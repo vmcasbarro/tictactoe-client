@@ -4,6 +4,8 @@ const store = require('./../store.js')
 
 const signInSuccess = function (response) {
   store.user = response.user
+  $('#history').removeClass('hidden')
+  $('#dilemma').addClass('hidden')
   $('#logout').empty()
   $('#number-of-games').empty()
   $('#signed-up').empty()
@@ -70,8 +72,10 @@ const changePasswordFailure = function () {
 
 const signOutSuccess = function () {
   $('#logout').html('you are successfully signed out.')
+  $('#history').addClass('hidden')
   $('#signup-form').removeClass('hidden')
   $('#signin-form').removeClass('hidden')
+  $('#dilemma').removeClass('hidden')
   $('#change-password-form').addClass('hidden')
   $('#signout-button').addClass('hidden')
   $('#number-of-games').empty()
@@ -79,10 +83,6 @@ const signOutSuccess = function () {
   $('#signup-form').trigger('reset')
   $('#change-password-form').trigger('reset')
 }
-
-$('#signin-form').trigger('reset')
-$('#signup-form').trigger('reset')
-$('#change-password-form').trigger('reset')
 
 module.exports = {
   signUpSuccess,
