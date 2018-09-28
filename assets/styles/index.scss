@@ -13,6 +13,8 @@ body {
   text-align: center;
   color: $background-color;
   background-color: $border-color;
+  margin: 0 auto;
+  width: 40%;
 }
 
 .notify {
@@ -62,4 +64,12 @@ body {
 
 .center {
   text-align: center;
+}
+
+.clear-margin {
+  margin: 0;
+}
+
+.clear-padding {
+  padding: 0;
 }

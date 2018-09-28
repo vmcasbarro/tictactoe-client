@@ -1,9 +1,12 @@
 'use strict'
 
 const store = require('./../store.js')
+const gameEvents = require('../game/events.js')
+
 
 const signInSuccess = function (response) {
   store.user = response.user
+  gameEvents.onReset()
   $('#history').removeClass('hidden')
   $('#dilemma').addClass('hidden')
   $('#logout').empty()
@@ -71,6 +74,7 @@ const changePasswordFailure = function () {
 }
 
 const signOutSuccess = function () {
+  gameEvents.onReset()
   $('#logout').html('you are successfully signed out.')
   $('#history').addClass('hidden')
   $('#signup-form').removeClass('hidden')
