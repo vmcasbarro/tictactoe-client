@@ -4,9 +4,14 @@ const store = require('./../store.js')
 
 const signInSuccess = function (response) {
   store.user = response.user
-  $('#signed-in').html('successfully signed in!')
-  $('#signed-in').css('color', 'green')
+  $('#logout').empty()
+  $('#notify-user').css('opacity', '1')
+  $('#notify-user').html('successfully signed in!')
+  $('#notify-user').css('color', '#75A77E')
+  $('#notify-user').fadeTo(6000, 0)
+  // $('#notify-user').empty()
   $('#signin-form').trigger('reset')
+  $('#signed-up').empty()
   $('#signup-form').addClass('hidden')
   $('#signin-form').addClass('hidden')
   $('#change-password-form').removeClass('hidden')
@@ -14,26 +19,32 @@ const signInSuccess = function (response) {
 }
 
 const signInFailure = function () {
-  $('#signed-in').html('sign-in unsuccessful.')
+  $('#signed-in').css('opacity', '1')
+  $('#signed-in').html('Sign-in unsuccessful. Please try again or sign up!')
   $('#signed-in').css('color', 'red')
+  $('#signed-in').fadeTo(6000, 0)
   $('#signin-form').trigger('reset')
 }
 
 const signUpSuccess = function () {
-  $('#signed-up').html('successfully signed up!')
-  $('#signed-up').css('color', 'green')
+  $('#logout').empty()
+  $('#signed-up').html('Successfully signed up! Log in?')
+  $('#signed-up').css('color', '#75A77E')
   $('#signup-form').trigger('reset')
+  $('#signup-form').addClass('hidden')
 }
 
 const signUpFailure = function () {
-  $('#signed-up').html('signup unsuccessful.')
+  $('#signed-up').html('Sign up unsuccessful. Please try again or play without logging in.')
   $('#signed-up').css('color', 'red')
   $('#signup-form').trigger('reset')
 }
 
 const changePasswordSuccess = function () {
-  $('#change-password').html('successfully changed password!')
+  $('#change-password').css('opacity', '1')
+  $('#change-password').html('Password changed.')
   $('#change-password').css('color', 'green')
+  $('#change-password').fadeTo(6000, 0)
   $('#change-password-form').trigger('reset')
 }
 

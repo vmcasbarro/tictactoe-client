@@ -38,48 +38,82 @@
       <p class="info"> current turn:
         <span id="whose-turn">x</span></p>
       <p class="info" id="game-status"></p>
-      <div class="reset">
-        <button
-          id="reset-button" class="btn btn-outline-danger"> new game
-        </button>
+      <p id="notify-user" class=notify></p>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 box reset">
+            <button
+              id="reset-button" class="btn btn-outline-danger"> new game
+            </button>
+            <br>
+          </div>
+
+          <div class="col-lg-6 box history">
+            <button id="history" class="btn btn-outline-danger" type="button" name="button">show game history</button>
+            <p id="number-of-games"></p>
+            <br>
+          </div>
+        </div>
       </div>
-      <br>
-      <div class="history">
-        <button id="history" class="btn btn-outline-danger" type="button" name="button">show game history</button>
-      </div>
-      <p id="number-of-games"></p>
-      <br>
+
 
 
       <div class="auth">
-        <form id="signup-form" action="index.html" method="post">
-          <legend>sign up!</legend>
+
+        <!-- work in progress -->
+        <!-- <form id="signup-form" action="index.html" method="post">
+          <legend>sign in OR up!</legend>
           <input required type="text" name="credentials[email]" placeholder="email"/>
           <br>
           <input required type="password" name="credentials[password]"  placeholder="password" />
           <br>
-          <input required type="password" name="credentials[password_confirmation]"  placeholder="confirm password"/>
-          <input type="submit" name="" value="submit" class="btn btn-outline-primary">
+          <input id="sign-in" type="submit" name="sign-in" value="sign in" class="btn btn-outline-primary">
+          <input id="sign-up" type="submit" name="sign-up" value="sign up" class="btn btn-outline-primary">
         </form>
         <p id="signed-up"></p>
-        <br>
-
-        <form id="signin-form" action="index.html" method="post">
-          <legend>sign in!</legend>
-          <input required type="text" name="credentials[email]" placeholder="email"/>
-          <br>
-          <input required type="password" name="credentials[password]"  placeholder="password" />
-          <input type="submit" name="" value="submit" class="btn btn-success">
-        </form>
         <p id="signed-in"></p>
+        <br> -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 box">
+              <form id="signup-form" action="index.html" method="post">
+                <legend>sign up</legend>
+                <input required type="text" name="credentials[email]" placeholder="email"/>
+                <br>
+                <input required type="password" name="credentials[password]"  placeholder="password" />
+                <br>
+                <input required type="password" name="credentials[password_confirmation]"  placeholder="confirm password"/>
+                <br>
+                <input type="submit" name="" value="submit" class="btn btn-outline-primary">
+              </form>
+              <p id="signed-up"></p>
+            </div>
+            <div class="col-lg-6 box">
+              <form id="signin-form" action="index.html" method="post">
+                <legend>sign in</legend>
+                <input required type="text" name="credentials[email]" placeholder="email"/>
+                <br>
+                <input required type="password" name="credentials[password]"  placeholder="password" />
+                <br>
+                <input type="submit" name="" value="submit" class="btn btn-success">
+              </form>
+              <p id="signed-in"></p>
+
+            </div>
+          </div>
+        </div>
 
         <form id="change-password-form" class="hidden">
           <legend>change password</legend>
           <input required type="password" name="passwords[old]" placeholder="old password"/>
           <br>
           <input required type="password" name="passwords[new]"  placeholder="new password" />
+          <br>
           <input type="submit" name="" value="change password" class="btn btn-success">
         </form>
+        <br>
         <p id="change-password"></p>
         <br>
 
