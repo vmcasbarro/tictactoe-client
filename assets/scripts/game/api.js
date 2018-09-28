@@ -1,6 +1,8 @@
 'use strict'
 const config = require('./../config.js')
 const store = require('./../store.js')
+const game = require('./../../../lib/game.js')
+const gameEvents = require('./events.js')
 
 const newGame = function () {
   return $.ajax({
@@ -12,7 +14,7 @@ const newGame = function () {
   })
 }
 
-const sendMove = function (data) {
+const sendMove = function (event) {
   return $.ajax({
     url: config.apiUrl + `/games/${store.game.id}`,
     method: 'PATCH',
@@ -22,10 +24,10 @@ const sendMove = function (data) {
     data: {
       "game": {
         "cell": {
-          "index": "0",
-          "value": "x"
+          "index": event.target.id,
+          "value": $(event.target).text()
         },
-        "over": "false"
+        "over": store.over
       }
     }
   })
