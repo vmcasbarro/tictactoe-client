@@ -23,11 +23,13 @@ body {
 }
 
 .container {
-  width: 40%;
+  width: 300px;
+  height: 300px;
 }
 .board {
   border-style: solid;
   border-color: $border-color;
+  height: 100px;
   padding-top: 12.5%;
   padding-bottom: 12.5%;
   text-align: center;
