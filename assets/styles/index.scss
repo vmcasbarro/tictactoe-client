@@ -1,12 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('../../../public/PressStart2P.ttf') format('truetype');
+};
 
-$background-color: #FAF3DD;
-$font-color: #929487;
-$border-color: #75A77E;
+$background-color: #000;
+$font-color: #FFD23F;
+$border-color: #FFD23F;
 
 body {
   background: $background-color;
   color: $font-color;
+  font-family: 'PressStart2P';
 }
 
 .info {
