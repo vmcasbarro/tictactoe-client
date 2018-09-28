@@ -24,7 +24,7 @@ const onReset = function () {
 const onGetHistory = function () {
   api.getHistory()
     .then(ui.historySuccess)
-    .catch(console.log)
+    .catch(ui.historyFailure)
 }
 
 module.exports = {

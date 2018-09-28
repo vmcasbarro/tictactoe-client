@@ -3,6 +3,7 @@ const config = require('./../config.js')
 const store = require('./../store.js')
 const game = require('./../../../lib/game.js')
 const gameEvents = require('./events.js')
+const ui = require('./ui.js')
 
 const newGame = function () {
   return $.ajax({
@@ -34,13 +35,17 @@ const sendMove = function (event) {
 }
 
 const getHistory = function () {
-  return $.ajax({
-    url: config.apiUrl + '/games',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
-  })
+  if (store.user) {
+    return $.ajax({
+      url: config.apiUrl + '/games',
+      method: 'GET',
+      headers: {
+        Authorization: 'Token token=' + store.user.token
+      }
+    })
+  } else {
+    ui.historyFailure()
+  }
 }
 
 module.exports = {

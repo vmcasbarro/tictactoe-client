@@ -30,9 +30,14 @@ const historySuccess = function (response) {
   $('#number-of-games').text(`total games played: ${response.games.length}`)
 }
 
+const historyFailure = function () {
+  $('#number-of-games').text('Sign up or log in to start recording games!')
+}
+
 module.exports = {
   addLetter,
   boardUIReset,
   startGameSuccess,
-  historySuccess
+  historySuccess,
+  historyFailure
 }

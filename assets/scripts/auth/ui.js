@@ -5,13 +5,14 @@ const store = require('./../store.js')
 const signInSuccess = function (response) {
   store.user = response.user
   $('#logout').empty()
+  $('#number-of-games').empty()
+  $('#signed-up').empty()
   $('#notify-user').css('opacity', '1')
   $('#notify-user').html('successfully signed in!')
   $('#notify-user').css('color', '#75A77E')
   $('#notify-user').fadeTo(6000, 0)
   // $('#notify-user').empty()
   $('#signin-form').trigger('reset')
-  $('#signed-up').empty()
   $('#signup-form').addClass('hidden')
   $('#signin-form').addClass('hidden')
   $('#change-password-form').removeClass('hidden')
@@ -28,6 +29,7 @@ const signInFailure = function () {
 
 const signUpSuccess = function () {
   $('#logout').empty()
+  $('#number-of-games').empty()
   $('#signed-up').html('Successfully signed up! Log in?')
   $('#signed-up').css('color', '#75A77E')
   $('#signup-form').trigger('reset')
@@ -60,6 +62,7 @@ const signOutSuccess = function () {
   $('#signin-form').removeClass('hidden')
   $('#change-password-form').addClass('hidden')
   $('#signout-button').addClass('hidden')
+  $('#number-of-games').empty()
 }
 
 module.exports = {
