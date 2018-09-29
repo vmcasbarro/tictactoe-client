@@ -14,26 +14,27 @@
     <body>
       <h1><a href="#">#</a><a href="#">T</a><a href="#">T</a><a href="#">T</a></h1>
 
-      <div class="container">
+      <div class="container grid">
         <div class="row">
-          <div id='0' data-cell-index='0' class="col-4 box board"></div>
-          <div id="1" data-cell-index='1' class="col-4 box board"></div>
-          <div id="2" data-cell-index='2' class="col-4 box board"></div>
+          <div id='0' data-cell-index='0' class="col-4 box board no-border-left no-border-top"></div>
+          <div id="1" data-cell-index='1' class="col-4 box board no-border-top"></div>
+          <div id="2" data-cell-index='2' class="col-4 box board no-border-top no-border-right"></div>
         </div>
 
         <div class="row">
-          <div id="3" data-cell-index='3' class="col-4 box board"></div>
+          <div id="3" data-cell-index='3' class="col-4 box board no-border-left"></div>
           <div id="4" data-cell-index='4' class="col-4 box board center"></div>
-          <div id="5" data-cell-index='5' class="col-4 box board"></div>
+          <div id="5" data-cell-index='5' class="col-4 box board no-border-right"></div>
         </div>
 
         <div class="row">
-          <div id="6" data-cell-index='6' class="col-4 box board bottom-row"></div>
-          <div id="7" data-cell-index='7' class="col-4 box board bottom-row"></div>
-          <div id="8" data-cell-index='8' class="col-4 box board bottom-row"></div>
+          <div id="6" data-cell-index='6' class="col-4 box board bottom-row no-border-left no-border-bottom"></div>
+          <div id="7" data-cell-index='7' class="col-4 box board bottom-row no-border-bottom"></div>
+          <div id="8" data-cell-index='8' class="col-4 box board bottom-row no-border-right no-border-bottom"></div>
         </div>
       </div>
       <br>
+
 
       <p class="info"> current turn:
         <span id="whose-turn">x</span></p>
@@ -60,11 +61,11 @@
       <div id="dilemma" class="center">
         <h2>Quick play above</h2>
         <p>or</p>
-        <h2>Log in to save your game history!</h2>
+        <h2><a id="reveal-auth" href="#">Log in to save your game history!</a></h2>
       </div>
 
 
-      <div class="auth">
+      <div class="auth hidden">
 
         <!-- work in progress -->
         <!-- <form id="signup-form" action="index.html" method="post">

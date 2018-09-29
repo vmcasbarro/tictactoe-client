@@ -4,6 +4,8 @@ $background-color: #FAF3DD;
 $font-color: #929487;
 $border-color: #75A77E;
 
+
+
 body {
   background: $background-color;
   color: $font-color;
@@ -22,17 +24,19 @@ body {
   color: $border-color;
 }
 
-.container {
+.grid {
   width: 300px;
   height: 300px;
 }
+
 .board {
   border-style: solid;
   border-color: $border-color;
-  height: 100px;
-  padding-top: 12.5%;
-  padding-bottom: 12.5%;
   text-align: center;
+  height: 100px;
+  font-size: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .center {
@@ -74,4 +78,41 @@ body {
 
 .clear-padding {
   padding: 0;
+}
+
+.no-border-left {
+  border-left-style: none;
+}
+
+.no-border-right {
+  border-right-style: none;
+}
+
+.no-border-top {
+  border-top-style: none;
+}
+
+.no-border-bottom {
+  border-bottom-style: none;
+}
+
+@media screen and (min-width: 600px) {
+  .grid {
+    width: 450px;
+    height: 450px;
+  }
+  .board {
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid {
+    width: 600px;
+    height: 600px;
+  }
+  .board {
+    height: 200px;
+    font-size: 50px;
+  }
 }
