@@ -109,8 +109,8 @@ a {
 }
 
 .reveal-auth-div {
-  padding-top: 100px;
-  padding-bottom: 300px;
+  padding-top: 25px;
+  padding-bottom: 100px;
 }
 
 .thin-border {
@@ -127,21 +127,21 @@ a {
 
 @media screen and (min-width: 600px) {
   .grid {
-    width: 450px;
-    height: 450px;
+    width: 375px;
+    height: 375px;
   }
   .board {
-    height: 150px;
+    height: 125px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .grid {
-    width: 600px;
-    height: 600px;
+    width: 375px;
+    height: 375px;
   }
   .board {
-    height: 200px;
+    height: 125px;
     font-size: 50px;
   }
 }
