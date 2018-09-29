@@ -22,6 +22,11 @@ a {
   color: inherit;
 }
 
+a:hover {
+  color: #C6DEA6;
+  text-decoration: none;
+}
+
 .info {
   text-align: center;
   color: $background-color;
