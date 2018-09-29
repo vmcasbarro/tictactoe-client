@@ -50,11 +50,16 @@ const onSignOut = function (event) {
     .catch(console.log)
 }
 
+const onShowAuth = function () {
+  ui.showAuth()
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
+  onShowAuth
   //onSign
 
 }

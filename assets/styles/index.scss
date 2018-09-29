@@ -11,6 +11,18 @@ body {
   color: $font-color;
 }
 
+footer {
+  background: $border-color;
+  color: $background-color;
+  text-align: right;
+  padding: 5px;
+}
+
+a {
+  color: inherit;
+}
+
+
 .info {
   text-align: center;
   color: $background-color;
@@ -94,6 +106,23 @@ body {
 
 .no-border-bottom {
   border-bottom-style: none;
+}
+
+.reveal-auth-div {
+  padding-top: 100px;
+  padding-bottom: 300px;
+}
+
+.thin-border {
+  border-style: solid;
+  border-width: 2px;
+  display: inline-block;
+  padding: 5px;
+}
+
+.inversion {
+  background-color: $border-color;
+  color: $background-color;
 }
 
 @media screen and (min-width: 600px) {

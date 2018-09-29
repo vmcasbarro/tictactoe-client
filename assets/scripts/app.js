@@ -32,5 +32,5 @@ $(() => {
   $('#reset-button').on('click', gameEvents.onReset)
 
   $('#history').on('click', gameEvents.onGetHistory)
-  $('#reveal-auth').on('click', authEvents.showAuth)
+  $('#reveal-auth').on('click', authEvents.onShowAuth)
 })

@@ -40,7 +40,7 @@ const signUpSuccess = function () {
   $('#logout').empty()
   $('#number-of-games').empty()
   $('#signed-up').html('Successfully signed up! Log in?')
-  $('#signed-up').css('color', '#75A77E')
+  // $('#signed-up').css('color', '#75A77E')
   $('#signup-form').addClass('hidden')
   $('#signin-form').trigger('reset')
   $('#signup-form').trigger('reset')
@@ -49,7 +49,7 @@ const signUpSuccess = function () {
 
 const signUpFailure = function () {
   $('#signed-up').html('Sign up unsuccessful. Please try again or play without logging in.')
-  $('#signed-up').css('color', 'red')
+  // $('#signed-up').css('color', 'red')
   $('#signin-form').trigger('reset')
   $('#signup-form').trigger('reset')
   $('#change-password-form').trigger('reset')
@@ -58,7 +58,7 @@ const signUpFailure = function () {
 const changePasswordSuccess = function () {
   $('#change-password').css('opacity', '1')
   $('#change-password').html('Password changed.')
-  $('#change-password').css('color', 'green')
+  // $('#change-password').css('color', 'green')
   $('#change-password').fadeTo(6000, 0)
   $('#signin-form').trigger('reset')
   $('#signup-form').trigger('reset')
@@ -67,7 +67,7 @@ const changePasswordSuccess = function () {
 
 const changePasswordFailure = function () {
   $('#change-password').html('something went wrong. Make sure you are logged in and try again.')
-  $('#change-password').css('color', 'red')
+  // $('#change-password').css('color', 'red')
   $('#signin-form').trigger('reset')
   $('#signup-form').trigger('reset')
   $('#change-password-form').trigger('reset')
@@ -88,6 +88,11 @@ const signOutSuccess = function () {
   $('#change-password-form').trigger('reset')
 }
 
+const showAuth = function () {
+  $('#auth').removeClass('hidden')
+  $('#dilemma').addClass('hidden')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -95,5 +100,6 @@ module.exports = {
   signInFailure,
   changePasswordSuccess,
   changePasswordFailure,
-  signOutSuccess
+  signOutSuccess,
+  showAuth
 }
