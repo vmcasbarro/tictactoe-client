@@ -32,7 +32,11 @@ a:hover {
   color: $background-color;
   background-color: $border-color;
   margin: 0 auto;
-  width: 40%;
+  width: 300px;
+}
+
+.dilemma {
+  width: 300px;
 }
 
 .notify {
@@ -61,6 +65,11 @@ a:hover {
 
 .auth {
   text-align: center;
+}
+
+.centered-container {
+  width: 40%;
+  margin: 0 auto;
 }
 
 .reset {
@@ -125,6 +134,28 @@ a:hover {
   color: $background-color;
 }
 
+.btn-outline-primary {
+  color: $border-color;
+  border-color: $border-color;
+}
+
+.btn-outline-primary:hover {
+  color: #C6DEA6;
+  border-color: $border-color;
+  background: $border-color;
+}
+
+.btn-outline-secondary {
+  color: $background-color;
+  border-color: $background-color;
+}
+
+.btn-outline-secondary:hover {
+  color: $border-color;
+  border-color: $background-color;
+  background: $background-color;
+}
+
 @media screen and (min-width: 600px) {
   .grid {
     width: 375px;
@@ -134,6 +165,12 @@ a:hover {
     height: 125px;
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  .info {
+    width: 375px;
+  }
+  .dilemma {
+    width: 375px;
   }
 }
 
@@ -145,5 +182,8 @@ a:hover {
   .board {
     height: 125px;
     font-size: 50px;
+  }
+  .info {
+    width: 375px;
   }
 }

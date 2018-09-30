@@ -41,17 +41,17 @@
       <p class="info margin-top" id="game-status"></p>
       <p id="notify-user" class=notify></p>
 
-      <div class="container">
+      <div class="container centered-container">
         <div class="row">
           <div class="col-lg-6 box reset">
             <button
-              id="reset-button" class="btn btn-primary"> new game
+              id="reset-button" class="btn btn-outline-primary btn-color"> new game
             </button>
             <br>
           </div>
 
           <div class="col-lg-6 box history">
-            <button id="history" class="btn btn-primary hidden" type="button" name="button">show game history</button>
+            <button id="history" class="btn btn-outline-primary hidden" type="button" name="button">show game history</button>
             <p id="number-of-games" class="margin-top"></p>
             <br>
           </div>
@@ -59,7 +59,7 @@
       </div>
 
       <div id="dilemma" class="center reveal-auth-div inversion">
-        <h4 id="reveal-auth" class="thin-border" href="#">
+        <h4 id="reveal-auth" class="thin-border dilemma" href="#">
           <a id="smooth-scroll" href="#footer">Log in to save your game history!</a>
         </h4>
       </div>
@@ -82,7 +82,7 @@
         <p id="signed-in"></p>
         <br> -->
 
-        <div class="container">
+        <div class="container centered-container">
           <div class="row">
             <div class="col-lg-6 box">
               <form id="signup-form" action="index.html" method="post">
@@ -93,7 +93,7 @@
                 <br>
                 <input required type="password" name="credentials[password_confirmation]"  placeholder="confirm password"/>
                 <br>
-                <input type="submit" name="" value="submit" class="btn btn-outline-primary margin-top-5">
+                <input type="submit" name="" value="submit" class="btn btn-outline-secondary margin-top-5">
               </form>
               <p id="signed-up"></p>
             </div>
@@ -104,7 +104,7 @@
                 <br>
                 <input required type="password" name="credentials[password]"  placeholder="password" />
                 <br>
-                <input type="submit" name="" value="submit" class="btn btn-success margin-top-5">
+                <input type="submit" name="" value="submit" class="btn btn-outline-secondary margin-top-5">
               </form>
               <p id="signed-in"></p>
 
@@ -118,14 +118,14 @@
           <br>
           <input required type="password" name="passwords[new]"  placeholder="new password" />
           <br>
-          <input type="submit" name="" value="change password" class="btn btn-success">
+          <input type="submit" name="" value="change password" class="btn btn-outline-secondary">
         </form>
         <br>
         <p id="change-password"></p>
         <br>
 
         <button
-          id="signout-button" class="btn btn-outline-danger hidden"> sign out
+          id="signout-button" class="btn btn-outline-secondary hidden"> sign out
         </button>
         <p id="logout" class="clear-margin"></p>
 
