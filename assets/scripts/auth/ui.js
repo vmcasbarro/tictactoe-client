@@ -85,6 +85,18 @@ const signOutSuccess = function () {
   $('#change-password-form').trigger('reset')
 }
 
+const signOutFailure = function () {
+  $('#logout').html('Something went wrong. Try again?')
+  $('#history').addClass('hidden')
+  $('#dilemma').removeClass('hidden')
+  $('#change-password-form').addClass('hidden')
+  $('#signout-button').addClass('hidden')
+  $('#number-of-games').empty()
+  $('#signin-form').trigger('reset')
+  $('#signup-form').trigger('reset')
+  $('#change-password-form').trigger('reset')
+}
+
 const showAuth = function () {
   $('#signup-form').removeClass('hidden')
   $('#signin-form').removeClass('hidden')
@@ -100,5 +112,6 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
+  signOutFailure,
   showAuth
 }

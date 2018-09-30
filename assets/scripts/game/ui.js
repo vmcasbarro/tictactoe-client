@@ -4,9 +4,7 @@ const store = require('./../store.js')
 
 // not working, use fxn in game.js
 const addLetter = function (index) {
-  console.log(game.currentLetter)
   game.takeTurns()
-  console.log(game.currentLetter)
   $(`[data-cell-index=${index}]`).text(`${game.currentLetter}`)
 }
 
@@ -34,10 +32,15 @@ const historyFailure = function () {
   $('#number-of-games').text('Sign up or log in to start recording games!')
 }
 
+const sendMoveFailure = function () {
+  $('#game-status').text('Something went wrong with server connection. Move not recorded.')
+}
+
 module.exports = {
   addLetter,
   boardUIReset,
   startGameSuccess,
   historySuccess,
-  historyFailure
+  historyFailure,
+  sendMoveFailure
 }

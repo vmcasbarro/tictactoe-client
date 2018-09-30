@@ -6,13 +6,12 @@ const ui = require('./ui.js')
 const game = require('../../../lib/game.js')
 
 const onSelect = function (event) {
-  console.log(event.target)
   const index = event.target.id
   game.addLetter(index)
 
   api.sendMove(event)
-    .then(console.log)
-    .catch(console.log)
+    .then()
+    .catch(ui.sendMoveFailure)
 }
 
 const onReset = function () {
