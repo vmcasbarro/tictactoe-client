@@ -4,20 +4,25 @@ const getFormFields = require('./../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 const game = require('../../../lib/game.js')
+const authUi = require('../auth/ui.js')
 
 const onSelect = function (event) {
   const index = event.target.id
   game.addLetter(index)
 
-  api.sendMove(event)
-    .then()
-    .catch(ui.sendMoveFailure)
+  if (authUi.signedIn) {
+    api.sendMove(event)
+      .then()
+      .catch(ui.sendMoveFailure)
+  }
 }
 
 const onReset = function () {
   ui.boardUIReset()
-  api.newGame()
-    .then(ui.startGameSuccess)
+  if (authUi.signedIn) {
+    api.newGame()
+      .then(ui.startGameSuccess)
+  }
 }
 
 const onGetHistory = function () {

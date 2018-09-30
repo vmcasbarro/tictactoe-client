@@ -3,6 +3,7 @@
 const getFormFields = require('./../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+const store = require('../store.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -10,7 +11,7 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
-
+  store.user.token = null
 }
 
 const onSignIn = function (event) {
@@ -48,6 +49,7 @@ const onSignOut = function (event) {
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
+
 }
 
 const onShowAuth = function () {
