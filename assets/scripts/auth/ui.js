@@ -32,7 +32,6 @@ const signInFailure = function () {
   $('#signed-in').css('color', 'red')
   $('#signed-in').fadeTo(6000, 0)
   $('#signin-form').trigger('reset')
-  $('#signup-form').trigger('reset')
   $('#change-password-form').trigger('reset')
 }
 
@@ -75,10 +74,8 @@ const changePasswordFailure = function () {
 
 const signOutSuccess = function () {
   gameEvents.onReset()
-  $('#logout').html('you are successfully signed out.')
+  $('#logout').html('Sign out successful.')
   $('#history').addClass('hidden')
-  $('#signup-form').removeClass('hidden')
-  $('#signin-form').removeClass('hidden')
   $('#dilemma').removeClass('hidden')
   $('#change-password-form').addClass('hidden')
   $('#signout-button').addClass('hidden')
@@ -89,6 +86,8 @@ const signOutSuccess = function () {
 }
 
 const showAuth = function () {
+  $('#signup-form').removeClass('hidden')
+  $('#signin-form').removeClass('hidden')
   $('#auth').removeClass('hidden')
   $('#dilemma').addClass('hidden')
 }
