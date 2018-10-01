@@ -56,7 +56,7 @@
   ![win alert](https://i.imgur.com/RuOU3ik.jpg "win alert")
   <p> While developing aspects of the application, I encountered times when my wire frame plan proved to be more complicated to implement than I realized, and I had to maintain design flexibility for the sake of time and efficiency. For instance, having a status bar that shows (1) whose turn it is and (2) the running total of wins and ties is an elegant design, but I had to hold off on implementing the functionality due to time restraints. This is absolutely something that I can incorporate into the project in future revisions. </p>
 
-
+  <p>More wireframes: [Wireframes and user stories](https://photos.app.goo.gl/fNYaQTQik8AqE5r89)</p>
 
 
 <h2>Future Directions</h2>
