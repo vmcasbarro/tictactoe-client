@@ -26,6 +26,7 @@ const signInSuccess = function (response) {
   $('#signin-form').trigger('reset')
   $('#signup-form').trigger('reset')
   $('#change-password-form').trigger('reset')
+  $('html, body').animate({scrollTop: 0}, 1000)
 }
 
 const signInFailure = function () {
