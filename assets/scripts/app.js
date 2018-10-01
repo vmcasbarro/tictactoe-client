@@ -31,6 +31,10 @@ $(() => {
 
   $('#reset-button').on('click', gameEvents.onReset)
 
+  $('#advanced-ai').change(gameEvents.onAdvancedAI)
+  $('#basic-ai').change(gameEvents.onBasicAI)
+  $('#no-ai').change(gameEvents.onNoAI)
+
   $('#history').on('click', gameEvents.onGetHistory)
   $('#reveal-auth').on('click', authEvents.onShowAuth)
 
