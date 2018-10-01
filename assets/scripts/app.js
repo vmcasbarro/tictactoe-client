@@ -31,6 +31,7 @@ $(() => {
 
   $('#reset-button').on('click', gameEvents.onReset)
 
+  $('#advanced-ai').change(gameEvents.onAdvancedAI)
   $('#basic-ai').change(gameEvents.onBasicAI)
   $('#no-ai').change(gameEvents.onNoAI)
 
