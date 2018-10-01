@@ -9,7 +9,7 @@ const authUi = require('../auth/ui.js')
 const onSelect = function (event) {
   const index = event.target.id
   game.addLetter(index)
-
+  game.basicAI()
   if (authUi.signedIn) {
     api.sendMove(event)
       .then()
