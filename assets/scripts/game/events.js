@@ -5,11 +5,14 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const game = require('../../../lib/game.js')
 const authUi = require('../auth/ui.js')
+let basicAI = false
 
 const onSelect = function (event) {
   const index = event.target.id
   game.addLetter(index)
-  game.basicAI()
+  if (basicAI) {
+    game.basicAI()
+  }
   if (authUi.signedIn) {
     api.sendMove(event)
       .then()
@@ -31,8 +34,19 @@ const onGetHistory = function () {
     .catch(ui.historyFailure)
 }
 
+const onBasicAI = function (event) {
+  basicAI = true
+}
+
+const onNoAI = function (event) {
+  basicAI = false
+}
+
 module.exports = {
   onSelect,
   onReset,
-  onGetHistory
+  onGetHistory,
+  onBasicAI,
+  onNoAI,
+  basicAI
 }

@@ -145,6 +145,12 @@ a:hover {
   background: $border-color;
 }
 
+.btn-outline-primary:checked {
+  color: #C6DEA6;
+  border-color: $border-color;
+  background: $border-color;
+}
+
 .btn-outline-secondary {
   color: $background-color;
   border-color: $background-color;
