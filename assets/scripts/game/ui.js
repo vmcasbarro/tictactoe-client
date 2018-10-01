@@ -2,7 +2,6 @@
 const game = require('../../../lib/game.js')
 const store = require('./../store.js')
 
-// not working, use fxn in game.js
 const addLetter = function (index) {
   game.takeTurns()
   $(`[data-cell-index=${index}]`).text(`${game.currentLetter}`)
@@ -16,7 +15,6 @@ const boardUIReset = function () {
   for (let i = 0; i < game.board.length; i++) {
     $(`[data-cell-index=${i}]`).empty()
   }
-
 }
 
 const startGameSuccess = function (response) {

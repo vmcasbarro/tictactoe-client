@@ -92,6 +92,4 @@ module.exports = {
   onSignOut,
   onShowAuth,
   smoothScroll
-  //onSign
-
 }
