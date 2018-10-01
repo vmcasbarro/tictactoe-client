@@ -12,7 +12,20 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1><a href="#">#</a><a href="#">T</a><a href="#">T</a><a href="#">T</a></h1>
+      <h1 class="inline"><a id="octothorp" href="#">#</a><a href="#">T</a><a href="#">T</a><a href="#">T</a></h1>
+      <div class="inline">
+        <div id="easter" class="btn-group btn-group-toggle hidden" data-toggle="buttons">
+          <label class="btn btn-secondary btn-outline-primary active">
+            <input type="radio" name="options" id="no-ai" autocomplete="off" checked> 2-player
+          </label>
+          <label class="btn btn-secondary btn-outline-primary">
+            <input type="radio" name="options" id="basic-ai" autocomplete="off"> AI level one
+          </label>
+          <label class="btn btn-secondary btn-outline-primary">
+            <input type="radio" name="options" id="advanced-ai" autocomplete="off"> AI level two
+          </label>
+        </div>
+      </div>
 
       <div class="container grid">
         <div class="row">
@@ -47,28 +60,10 @@
             <button
               id="reset-button" class="btn btn-outline-primary btn-color"> new game
             </button>
-            <br>
           </div>
-
           <div class="col-lg-6 box history">
             <button id="history" class="btn btn-outline-primary hidden" type="button" name="button">show game history</button>
             <p id="number-of-games" class="margin-top"></p>
-            <br>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 box">
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-secondary btn-outline-primary active">
-                <input type="radio" name="options" id="no-ai" autocomplete="off" checked> 2-player
-              </label>
-              <label class="btn btn-secondary btn-outline-primary">
-                <input type="radio" name="options" id="basic-ai" autocomplete="off"> AI level one
-              </label>
-              <label class="btn btn-secondary btn-outline-primary">
-                <input type="radio" name="options" id="advanced-ai" autocomplete="off"> AI level two
-              </label>
-            </div>
           </div>
         </div>
       </div>

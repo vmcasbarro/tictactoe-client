@@ -36,11 +36,16 @@ const sendMoveFailure = function () {
   $('#game-status').text('Something went wrong with server connection. Move not recorded.')
 }
 
+const showAIOptions = function () {
+  $('#easter').removeClass('hidden')
+}
+
 module.exports = {
   addLetter,
   boardUIReset,
   startGameSuccess,
   historySuccess,
   historyFailure,
-  sendMoveFailure
+  sendMoveFailure,
+  showAIOptions
 }

@@ -162,6 +162,14 @@ a:hover {
   background: $background-color;
 }
 
+.inline {
+  display: inline;
+}
+
+.btn-group {
+  margin-top: -12px;
+}
+
 @media screen and (min-width: 600px) {
   .grid {
     width: 375px;

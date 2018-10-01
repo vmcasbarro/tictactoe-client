@@ -38,6 +38,9 @@ $(() => {
   $('#history').on('click', gameEvents.onGetHistory)
   $('#reveal-auth').on('click', authEvents.onShowAuth)
 
+  // EASTER EGG
+  $('#octothorp').on('click', gameEvents.onEasterEgg)
+
   // SMOOTH SCROLLING
   // snippet from https://css-tricks.com/snippets/jquery/smooth-scrolling/
   $('a[href*="#"]')

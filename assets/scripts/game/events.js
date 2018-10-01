@@ -52,6 +52,10 @@ const onAdvancedAI = function (event) {
   basicAI = false
 }
 
+const onEasterEgg = function (event) {
+  ui.showAIOptions()
+}
+
 module.exports = {
   onSelect,
   onReset,
@@ -60,5 +64,6 @@ module.exports = {
   onNoAI,
   basicAI,
   onAdvancedAI,
-  advancedAI
+  advancedAI,
+  onEasterEgg
 }
