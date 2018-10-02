@@ -48,8 +48,10 @@ Play it here: https://vmcasbarro.github.io/tictactoe-client/
       <li><h4>Version Control</h4>
         <p>Managed locally with git repositories, which was linked to a cloud-based version control system, GitHub. Over a dozen development branches and more than 50 commits were made during the game's v1 development.</p>
       </li>
-      <li><h4>File Structure</h4>
-        <p>To allow for modular design, the codebase was divided into several directories and subdirectories to keep each aspect of the code independent and modular. Game logic, authorization, styling, and game rendering in the browser were all separated into independent directories. Authorization and game rendering were further divided into api, ui, and event files. A store.js file was utlilized as an intermediary between files to avoid circular references when necessary.</p>
+      <li><h4>Separation of Concerns</h4>
+        <p>
+
+        To allow for modular design, the codebase was divided into several directories and subdirectories to keep each aspect of the code independent and modular. Game logic, authorization, styling, and game rendering in the browser were all separated into independent directories. Authorization and game rendering were further divided into api, ui, and event files. A store.js file was utlilized as an intermediary between files to avoid circular references when necessary.</p>
       </li>
     </ul>
 
@@ -71,7 +73,7 @@ Play it here: https://vmcasbarro.github.io/tictactoe-client/
       <li>User will receive noticification indicating when x or o wins, or if there is a tie.</li>
       <li>User will be able to reset game board at any time.</li>
     </ol>
-    
+
 <h2>Future Directions</h2>
   <p>In future versions of the game, I would like to add several levels of AI to play against, including a perfect AI against which it is impossible to win. I would also like to improve the GUI by adding an integrated status bar showing whose turn it is, who won if the game is over, and a running total of wins for x/o and total number of ties during that session.</p>
 <h2>Current Limitations</h2>
