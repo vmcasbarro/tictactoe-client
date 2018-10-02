@@ -11,13 +11,14 @@ Play it here: https://vmcasbarro.github.io/tictactoe-client/
     <p>This project was my first attempt at building a fully functional single-page web application powered by JavaScript. When approaching smaller coding challenges (like this [Boggle board](https://www.google.com "Boggle board on github")), I spent time thinking about the problem, pseudocoding, and mapping out my logic on paper before writing a single line of code. Since this has been so helpful for me in the past, I approached the project in the same way. I also took this time to sketch out a timeline of what I wanted to accomplish on each day (given the 4 days alloted for the project).</p>
     <p>I began by addressing the game's logic engine. I routinely tested out the code using node repls and copious console.logs, and once I felt like the majority of the logic was working like I wanted it to, I moved on to the visual structure of the site.</p>
     <p> Creating a basic game board and structure for my site was easy to begin using HTML and SASS, but the perfectionist nature in me threatened to derail my progress as I wanted to lay out everything perfectly! I was ultimately able to keep to my timeline but it meant I had to embrace the mantra "done is better than perfect."</p>
-    <p> From there I moved on to writing the 
+    <p> From there I moved on to writing ajax calls to communicate with a server via API. This added user authentication and the ability to send game statistics to a server, and then to be retreived/manipulated on the front-end. </p>
 
   <h2>Technologies Used</h2>
     <ul>
       <li><h3>JavaScript</h3>
         <p>Game engine, dynamic game rendering in the browser, communication with server-side via API.</p></li>
       <li><h3>jQuery</h3></li>
+      <li><h3>AJAX</h3></li>
       <li><h3>HTML and CSS</h3>
         <p> Used to create a consistent user-experience with straight-forward affordances so that possible actions are obvious to the user and straight-forward to execute.</p></li>
       <li><h3>Bootstrap</h3>
