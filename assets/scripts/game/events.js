@@ -10,7 +10,6 @@ let basicAI = false
 let advancedAI = false
 
 const onSelect = function (event) {
-  console.log('made it to events.onSelect', store.signedIn)
   const index = event.target.id
   game.addLetter(index)
   if (basicAI) {
@@ -19,18 +18,15 @@ const onSelect = function (event) {
     game.advancedAI()
   }
   if (store.signedIn) {
-    console.log('should be going to PATCH')
     api.sendMove(event)
-      .then(console.log)
+      .then()
       .catch(ui.sendMoveFailure)
   }
 }
 
 const onReset = function () {
   ui.boardUIReset()
-  console.log('made it to gameEvents.onReset', store.signedIn)
   if (store.signedIn) {
-    console.log('should start new game')
     api.newGame()
       .then(ui.startGameSuccess)
   }

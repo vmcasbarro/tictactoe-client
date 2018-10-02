@@ -7,7 +7,6 @@ store.signedIn = false
 const signInSuccess = function (response) {
   store.user = response.user
   store.signedIn = true
-  console.log('made it to authUi.signInSuccess. store var: ', store.signedIn, store.user)
   gameEvents.onReset()
   $('#history').removeClass('hidden')
   $('#dilemma').addClass('hidden')
