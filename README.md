@@ -1,7 +1,17 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
-<h2>Game Description</h2>
-  <p>An antagonistic, turn based competition where participants are conventionally assigned the 24th or 15th letter of the alphabet and seek to place 3 of their respective characters on a 3x3 grid. </p>
-  <p>Also known as tic-tac-toe.</p>
+
+<h1>WDI Project One: Tic Tac Toe</h1>
+Play it here: https://vmcasbarro.github.io/tictactoe-client/
+
+  <h2>Game Description</h2>
+    <p>An antagonistic, turn based competition where participants are conventionally assigned the 24th or 15th letter of the alphabet and seek to place 3 of their respective characters on a 3x3 grid. </p>
+    <p>Also known as tic-tac-toe.</p>
+
+  <h2>Design Process</h2>
+    <p>This project was my first attempt at building a fully functional single-page web application powered by JavaScript. When approaching smaller coding challenges (like this [Boggle board](https://www.google.com "Boggle board on github")), I spent time thinking about the problem, pseudocoding, and mapping out my logic on paper before writing a single line of code. Since this has been so helpful for me in the past, I approached the project in the same way. I also took this time to sketch out a timeline of what I wanted to accomplish on each day (given the 4 days alloted for the project).</p>
+    <p>I began by addressing the game's logic engine. I routinely tested out the code using node repls and copious console.logs, and once I felt like the majority of the logic was working like I wanted it to, I moved on to the visual structure of the site.</p>
+    <p> Creating a basic game board and structure for my site was easy to begin using HTML and SASS, but the perfectionist nature in me threatened to derail my progress as I wanted to lay out everything perfectly! I was ultimately able to keep to my timeline but it meant I had to embrace the mantra "done is better than perfect."</p>
+    <p> From there I moved on to writing the 
 
   <h2>Technologies Used</h2>
     <ul>
