@@ -50,6 +50,7 @@
     </ol>
 
 <h2>Wire Framing</h2>
+
   ![wire frame](https://i.imgur.com/cqcgZ0d.jpg "wire frame")
   <p> Planning out the design and flow of this application informed my process and I began developing the game engine, user interface, and styling. One feature that I wanted to include from the beginning was a "quick play" option where a user could play the game instantly, without signing in. Having this plan before attempting to do any coding was critical, and I ultimately ensured that my game logic was entirely independent from ajax calls. </p>
 
