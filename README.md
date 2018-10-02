@@ -13,6 +13,18 @@ Play it here: https://vmcasbarro.github.io/tictactoe-client/
     <p> Creating a basic game board and structure for my site was easy to begin using HTML and SASS, but the perfectionist nature in me threatened to derail my progress as I wanted to lay out everything perfectly! I was ultimately able to keep to my timeline but it meant I had to embrace the mantra "done is better than perfect."</p>
     <p> From there I moved on to writing ajax calls to communicate with a server via API. This added user authentication and the ability to send game statistics to a server, and then to be retreived/manipulated on the front-end. </p>
 
+
+
+<h2>Wire Framing</h2>
+
+  ![wire frame](https://i.imgur.com/cqcgZ0d.jpg "wire frame")
+  <p> Planning out the design and flow of this application informed my process and I began developing the game engine, user interface, and styling. One feature that I wanted to include from the beginning was a "quick play" option where a user could play the game instantly, without signing in. Having this plan before attempting to do any coding was critical, and I ultimately ensured that my game logic was entirely independent from ajax calls. </p>
+
+  ![win alert](https://i.imgur.com/RuOU3ik.jpg "win alert")
+  <p> While developing aspects of the application, I encountered times when my wire frame plan proved to be more complicated to implement than I realized, and I had to maintain design flexibility for the sake of time and efficiency. For instance, having a status bar that shows (1) whose turn it is and (2) the running total of wins and ties is an elegant design, but I had to hold off on implementing the functionality due to time restraints. This is absolutely something that I can incorporate into the project in future revisions. </p>
+
+  <p>More wireframes: [Wireframes and user stories](https://photos.app.goo.gl/fNYaQTQik8AqE5r89)</p>
+
   <h2>Technologies Used</h2>
     <ul>
       <li><h3>JavaScript</h3>
@@ -59,18 +71,7 @@ Play it here: https://vmcasbarro.github.io/tictactoe-client/
       <li>User will receive noticification indicating when x or o wins, or if there is a tie.</li>
       <li>User will be able to reset game board at any time.</li>
     </ol>
-
-<h2>Wire Framing</h2>
-
-  ![wire frame](https://i.imgur.com/cqcgZ0d.jpg "wire frame")
-  <p> Planning out the design and flow of this application informed my process and I began developing the game engine, user interface, and styling. One feature that I wanted to include from the beginning was a "quick play" option where a user could play the game instantly, without signing in. Having this plan before attempting to do any coding was critical, and I ultimately ensured that my game logic was entirely independent from ajax calls. </p>
-
-  ![win alert](https://i.imgur.com/RuOU3ik.jpg "win alert")
-  <p> While developing aspects of the application, I encountered times when my wire frame plan proved to be more complicated to implement than I realized, and I had to maintain design flexibility for the sake of time and efficiency. For instance, having a status bar that shows (1) whose turn it is and (2) the running total of wins and ties is an elegant design, but I had to hold off on implementing the functionality due to time restraints. This is absolutely something that I can incorporate into the project in future revisions. </p>
-
-  <p>More wireframes: [Wireframes and user stories](https://photos.app.goo.gl/fNYaQTQik8AqE5r89)</p>
-
-
+    
 <h2>Future Directions</h2>
   <p>In future versions of the game, I would like to add several levels of AI to play against, including a perfect AI against which it is impossible to win. I would also like to improve the GUI by adding an integrated status bar showing whose turn it is, who won if the game is over, and a running total of wins for x/o and total number of ties during that session.</p>
 <h2>Current Limitations</h2>
