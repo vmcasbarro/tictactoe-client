@@ -2,11 +2,12 @@
 
 const store = require('./../store.js')
 const gameEvents = require('../game/events.js')
-let signedIn = false
+store.signedIn = false
 
 const signInSuccess = function (response) {
   store.user = response.user
-  signedIn = true
+  store.signedIn = true
+  console.log('made it to authUi.signInSuccess. store var: ', store.signedIn, store.user)
   gameEvents.onReset()
   $('#history').removeClass('hidden')
   $('#dilemma').addClass('hidden')
@@ -71,7 +72,7 @@ const changePasswordFailure = function () {
 
 const signOutSuccess = function () {
   gameEvents.onReset()
-  signedIn = false
+  store.signedIn = false
   $('#logout').html('Sign out successful.')
   $('#history').addClass('hidden')
   $('#dilemma').removeClass('hidden')
@@ -111,6 +112,5 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure,
-  showAuth,
-  signedIn
+  showAuth
 }

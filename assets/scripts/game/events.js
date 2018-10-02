@@ -5,10 +5,12 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const game = require('../../../lib/game.js')
 const authUi = require('../auth/ui.js')
+const store = require('../store.js')
 let basicAI = false
 let advancedAI = false
 
 const onSelect = function (event) {
+  console.log('made it to events.onSelect', store.signedIn)
   const index = event.target.id
   game.addLetter(index)
   if (basicAI) {
@@ -16,16 +18,19 @@ const onSelect = function (event) {
   } else if (advancedAI) {
     game.advancedAI()
   }
-  if (authUi.signedIn) {
+  if (store.signedIn) {
+    console.log('should be going to PATCH')
     api.sendMove(event)
-      .then()
+      .then(console.log)
       .catch(ui.sendMoveFailure)
   }
 }
 
 const onReset = function () {
   ui.boardUIReset()
-  if (authUi.signedIn) {
+  console.log('made it to gameEvents.onReset', store.signedIn)
+  if (store.signedIn) {
+    console.log('should start new game')
     api.newGame()
       .then(ui.startGameSuccess)
   }

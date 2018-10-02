@@ -56,6 +56,8 @@ const onShowAuth = function () {
   ui.showAuth()
 }
 
+
+// https://css-tricks.com/snippets/jquery/smooth-scrolling/
 const smoothScroll = function (event) {
   // On-page links
   if (
