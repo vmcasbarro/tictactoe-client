@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>#TTT</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1 class="inline"><a id="octothorp" href="#">#</a><a href="#">T</a><a href="#">T</a><a href="#">T</a></h1>
+      <div class="inline">
+        <div id="easter" class="btn-group btn-group-toggle hidden" data-toggle="buttons">
+          <label class="btn btn-secondary btn-outline-primary active">
+            <input type="radio" name="options" id="no-ai" autocomplete="off" checked> 2-player
+          </label>
+          <label class="btn btn-secondary btn-outline-primary">
+            <input type="radio" name="options" id="basic-ai" autocomplete="off"> AI level one
+          </label>
+          <label class="btn btn-secondary btn-outline-primary">
+            <input type="radio" name="options" id="advanced-ai" autocomplete="off"> AI level two
+          </label>
+        </div>
+      </div>
+
+      <div class="container grid">
+        <div class="row">
+          <div id='0' data-cell-index='0' class="col-4 box board no-border-left no-border-top"></div>
+          <div id="1" data-cell-index='1' class="col-4 box board no-border-top"></div>
+          <div id="2" data-cell-index='2' class="col-4 box board no-border-top no-border-right"></div>
+        </div>
+
+        <div class="row">
+          <div id="3" data-cell-index='3' class="col-4 box board no-border-left"></div>
+          <div id="4" data-cell-index='4' class="col-4 box board center"></div>
+          <div id="5" data-cell-index='5' class="col-4 box board no-border-right"></div>
+        </div>
+
+        <div class="row">
+          <div id="6" data-cell-index='6' class="col-4 box board bottom-row no-border-left no-border-bottom"></div>
+          <div id="7" data-cell-index='7' class="col-4 box board bottom-row no-border-bottom"></div>
+          <div id="8" data-cell-index='8' class="col-4 box board bottom-row no-border-right no-border-bottom"></div>
+        </div>
+      </div>
+      <br>
+
+
+      <p class="info"> current turn:
+        <span id="whose-turn">x</span></p>
+      <p class="info margin-top" id="game-status"></p>
+      <p id="notify-user" class=notify></p>
+
+      <div class="container centered-container">
+        <div class="row">
+          <div class="col-lg-6 box reset">
+            <button
+              id="reset-button" class="btn btn-outline-primary btn-color"> new game
+            </button>
+          </div>
+          <div class="col-lg-6 box history">
+            <button id="history" class="btn btn-outline-primary hidden" type="button" name="button">show game history</button>
+            <p id="number-of-games" class="margin-top"></p>
+          </div>
+        </div>
+      </div>
+      <br>
+
+
+
+      <div id="dilemma" class="center reveal-auth-div inversion">
+        <h4 id="reveal-auth" class="thin-border dilemma" href="#">
+          <a id="smooth-scroll" href="#footer">Log in to save your game history!</a>
+        </h4>
+      </div>
+
+
+      <div id="auth" class="auth inversion hidden">
+        <br>
+
+        <!-- work in progress -->
+        <!-- <form id="signup-form" action="index.html" method="post">
+          <legend>sign in OR up!</legend>
+          <input required type="text" name="credentials[email]" placeholder="email"/>
+          <br>
+          <input required type="password" name="credentials[password]"  placeholder="password" />
+          <br>
+          <input id="sign-in" type="submit" name="sign-in" value="sign in" class="btn btn-outline-primary">
+          <input id="sign-up" type="submit" name="sign-up" value="sign up" class="btn btn-outline-primary">
+        </form>
+        <p id="signed-up"></p>
+        <p id="signed-in"></p>
+        <br> -->
+
+        <div class="container centered-container">
+          <div class="row">
+            <div class="col-lg-6 box">
+              <form id="signup-form" action="index.html" method="post">
+                <legend>sign up</legend>
+                <input required type="text" name="credentials[email]" placeholder="email"/>
+                <br>
+                <input required type="password" name="credentials[password]"  placeholder="password" />
+                <br>
+                <input required type="password" name="credentials[password_confirmation]"  placeholder="confirm password"/>
+                <br>
+                <input type="submit" name="" value="submit" class="btn btn-outline-secondary margin-top-5">
+              </form>
+              <p id="signed-up"></p>
+            </div>
+            <div class="col-lg-6 box">
+              <form id="signin-form" action="index.html" method="post">
+                <legend>sign in</legend>
+                <input required type="text" name="credentials[email]" placeholder="email"/>
+                <br>
+                <input required type="password" name="credentials[password]"  placeholder="password" />
+                <br>
+                <input type="submit" name="" value="submit" class="btn btn-outline-secondary margin-top-5">
+              </form>
+              <p id="signed-in"></p>
+            </div>
+          </div>
+        </div>
+
+        <form id="change-password-form" class="hidden">
+          <legend>change password</legend>
+          <input required type="password" name="passwords[old]" placeholder="old password"/>
+          <br>
+          <input required type="password" name="passwords[new]"  placeholder="new password" />
+          <br>
+          <input type="submit" name="" value="change password" class="btn btn-outline-secondary">
+        </form>
+        <br>
+        <p id="change-password"></p>
+        <br>
+
+        <button
+          id="signout-button" class="btn btn-outline-secondary hidden"> sign out
+        </button>
+        <p id="logout" class="clear-margin"></p>
+
+      </div>
+      <footer id="footer">
+        code and design by <a target="_blank" href="https://www.linkedin.com/in/vince-casbarro/">Vince Casbarro</a>
+      </footer>
+    </body>
+</html>
