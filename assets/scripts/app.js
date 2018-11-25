@@ -10,10 +10,10 @@ $(() => {
   // AUTH
   $('#signup-form').on('submit', authEvents.onSignUp)
   $('#signin-form').on('submit', authEvents.onSignIn)
-  // work-in-progress
-  // $('#sign-form').on('submit', authEvents.onSign)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('#signout-button').on('click', authEvents.onSignOut)
+  // work-in-progress
+  // $('#sign-form').on('submit', authEvents.onSign)
 
   // GAME
   $(`[data-cell-index=0]`).on('click', gameEvents.onSelect)
